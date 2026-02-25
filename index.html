@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Voice Recorder Test</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Voice Recorder</h1>
+    <p class="hint">Tap “Record”, speak, then “Stop” and “Play”.</p>
+
+    <div class="row">
+      <button id="btnRecord">🎙️ Record</button>
+      <button id="btnStop" disabled>⏹️ Stop</button>
+      <button id="btnPlay" disabled>▶️ Play</button>
+      <button id="btnClear" disabled>🧹 Clear</button>
+    </div>
+
+    <div class="status" id="status">Status: idle</div>
+
+    <audio id="player" controls class="player" hidden></audio>
+
+    <details class="tips">
+      <summary>Troubleshooting</summary>
+      <ul>
+        <li>Mic permission must be allowed in your browser.</li>
+        <li>Use HTTPS or localhost. GitHub Pages is HTTPS.</li>
+        <li>If Record does nothing, your browser may not support MediaRecorder.</li>
+      </ul>
+    </details>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
